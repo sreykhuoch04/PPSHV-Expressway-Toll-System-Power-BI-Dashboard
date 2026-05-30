@@ -14,7 +14,7 @@ This project analyzes Cambodia's **PPSHV Expressway** toll transaction data for 
 
 ## Dashboard Preview
 
-![PPSHV Expressway Toll System Dashboard](Dashboard_Screenshots/Executive Overview.png)
+![PPSHV Expressway Toll System Dashboard](Dashboard_Screenshots/Executive%20Overview.png)
 
 ---
 
@@ -266,6 +266,8 @@ RETURN CONCATENATEX(PeakHourTable, [Hour] & ":00")
 
 ### Page 1 — Executive Overview
 
+![Executive Overview](Dashboard_Screenshots/Executive%20Overview.png)
+
 | Visual | Type | X / Legend | Y / Values |
 |---|---|---|---|
 | Total Revenue | Card | — | Total Revenue |
@@ -280,6 +282,8 @@ RETURN CONCATENATEX(PeakHourTable, [Hour] & ":00")
 
 ### Page 2 — Traffic & Operations
 
+![Traffic & Operations](Dashboard_Screenshots/Traffice%20and%20Operation.png)
+
 | Visual | Type | X / Legend | Y / Values |
 |---|---|---|---|
 | Total Trips | Card | — | Total Trips |
@@ -291,6 +295,8 @@ RETURN CONCATENATEX(PeakHourTable, [Hour] & ":00")
 | Total Trips by Station | Bar Chart | STATIONS[NAME_EN] | Total Trips |
 
 ### Page 3 — Data Quality Monitor
+
+![Data Quality Monitor](Dashboard_Screenshots/Data%20Quality%20Monitor.png)
 
 | Visual | Type | X / Legend | Y / Values |
 |---|---|---|---|
@@ -304,6 +310,8 @@ RETURN CONCATENATEX(PeakHourTable, [Hour] & ":00")
 | Station Quality Summary | Table | NAME_EN, Total Trips, Error Rate, Station Status | — |
 
 ### Page 4 — Revenue Analysis
+
+![Revenue Analysis](Dashboard_Screenshots/Revenue%20Analysis.png)
 
 | Visual | Type | X / Legend | Y / Values |
 |---|---|---|---|
