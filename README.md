@@ -357,24 +357,7 @@ RETURN CONCATENATEX(PeakHourTable, [Hour] & ":00")
 | Data includes 2022 | Dataset starts 27 December 2022 | Filtered to 2023 only in Power Query |
 | Peak hour shows unexpected time | Data reflects intercity travel pattern | Confirmed 15:00 is correct for this dataset |
 
----
 
-## Project Structure
-
-```
-ppshv-expressway-dashboard/
-│
-├── README.md                      ← This file
-├── Project_Documentation.pdf      ← Full technical documentation
-│
-├── data/
-│   ├── PPSHV_2023_Datasets.csv    ← Fact table (4.91M rows)
-│   ├── PPSHV_STATIONS.csv         ← Station dimension
-│   └── PPSHV_GATES.csv            ← Gates dimension
-│
-└── dashboard/
-    └── PPSHV_Dashboard.pbix       ← Power BI file
-```
 
 ---
 
@@ -387,16 +370,6 @@ ppshv-expressway-dashboard/
 
 ---
 
-## Team
-
-| Name | Role |
-|---|---|
-| [Member 1] | Data modeling, relationships and DAX |
-| [Member 2] | Dashboard design and formatting |
-| [Member 3] | Business analysis and insights |
-| [Member 4] | Presentation and documentation |
-
----
 
 ## License
 
