@@ -12,6 +12,10 @@ This project analyzes Cambodia's **PPSHV Expressway** toll transaction data for 
 > **Records:** 4,910,002 transactions  
 > **Stations:** 8 stations across the expressway network
 
+## Dashboard Preview
+
+![PPSHV Expressway Toll System Dashboard](Dashboard_Screenshots/Executive Overview.png)
+
 ---
 
 ## Dashboard Pages
