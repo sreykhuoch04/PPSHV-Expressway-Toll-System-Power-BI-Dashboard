@@ -31,22 +31,39 @@ This project analyzes Cambodia's **PPSHV Expressway** toll transaction data for 
 
 ## Key Findings
 
-### Finding 1 — Revenue Concentration
-Phnom Penh station generates **$16M — 43% of all network revenue** from a single location. Together with Sihanoukville, just 2 stations account for **77% of total revenue**.
+### Finding 1 — Macro Revenue Drivers & Passenger Car Dominance
+- **The Paradigm Shift:** A rigorous composition analysis of the network's financial infrastructure reveals an extreme economic reliance on consumer transit. While the corridor accommodates a diverse logistics mix—including medium trucks, large coaches, and container trailers—their combined financial footprint remains entirely marginal compared to personal commuter traffic.
+- **The Data Proof:** As visually detailed in the *Revenue by Vehicle Type* charts across **Figure 1** and **Figure 4**, **Passenger Cars** generate an overwhelming **84.57%** of total earnings, contributing **$31.54 million** of the total **$37.29 million** annual yield.
+- **Minority Shares:** The remaining market share is minutely split among Medium Trucks / Small Buses at **10.95% ($4.08M)**, Large Coaches at **2.39% ($0.89M)**, and Container Trucks / Trailers at just **1.69% ($0.63M)**.
+- **Strategic Implication:** The expressway’s commercial viability is heavily tethered to individual consumer travel habits and holiday/weekend commuting trends rather than industrial shipping supply chains. If passenger vehicle volumes drop even slightly, the network lacks a substantial industrial freight base to buffer the financial loss.
 
-### Finding 2 — Afternoon Peak Traffic
-Traffic peaks at **15:00 (3pm)** — not the typical morning commute pattern. This confirms the expressway primarily serves intercity travelers and commercial vehicles. Hours 14, 15 and 16 are the three busiest hours daily.
+### Finding 2 — Geographical Centralization of Traffic & Revenue Hubs
+- **The Polarization Trend:** Operational metrics expose an acute geographic centralization across the network, establishing a steep performance drop-off between primary urban terminals and minor intermediary provincial stations.
+- **Volume Distribution:** The *Total Trips by Station* bar chart (**Figure 2**) shows that **Phnom Penh** sits at the absolute center of network activity with **1,930K trips** (1,929.92K), while **Sihanoukville** registers **1,163K trips** (1,162.62K). Together, these two terminuses command approximately **62.9%** of the **4.91 million total trips**.
+- **Financial Impact:** The *Revenue By Stations* bar chart (**Figure 4**) confirms that this physical traffic dominance maps directly to cash flow: Phnom Penh yields **$16.02M** and Sihanoukville generates **$12.80M**. Combined, they capture over **77.3%** of all network revenue, leaving intermediate installations such as Kompong Speu East ($2.17M) and Kompong Sela ($1.79M) to serve secondary roles, while Steung Haov contributes a negligible $0.82M.
 
-### Finding 3 — Data Quality Risk
-Overall error rate is **1%** — representing **52,000 affected transactions** in 2023. Error rate concentrates at our highest revenue stations, creating a dual risk: maximum revenue exposure plus maximum data quality issues at the same locations.
+### Finding 3 — Temporal Diurnal Rhythms & Afternoon Peak Plateau
+- **The Commute Pattern:** Temporal tracking across a standard 24-hour window indicates a clear, bell-shaped diurnal distribution that differs from typical urban morning-heavy commutes. Traffic builds gradually through the morning, expanding into a sustained daytime plateau.
+- **The Data Proof:** As plotted on the *Total Trips by Hour of Day* chart (**Figure 2**), traffic is minimal in the early morning hours, bottoming out between **01:00 and 03:00** at a floor of **25.8K trips**. It ramps up aggressively starting at 05:00 (117.1K) and passes the 230K mark by 08:00. Volume expands steadily across midday, culminating in an absolute daily peak at **15:00:00**, logging **363.96K trips**.
+- **The Traffic Decline:** Hours 14:00 (362.8K), 15:00 (364.0K), and 16:00 (356.1K) represent the three busiest hours daily. After 15:00, traffic steadily declines through the evening, dropping back to **56.08K** by **23:00**. This pattern points to an intercity transit cycle where long-distance travelers and intercity delivery vans complete their multi-hour runs by mid-afternoon.
+
+### Finding 4 — Longitudinal Seasonality & Q4 Peak Acceleration
+- **The Seasonal Curve:** Looking at data across the 12-month calendar year, a clear seasonal trajectory appears, marked by a mid-year operational slow-down and an aggressive acceleration in the final quarter.
+- **The Data Proof:** The *Total Revenue 2023 by Month* line chart—prominently featured on both **Figure 1** and **Figure 4**—shows the year opening at $3.0M in January before plunging to a yearly low of **$2.6M in February**. It spikes up to $3.4M in April and May, but declines again to a secondary mid-year valley of **$2.8M in September**. Q4 exhibits an impressive recovery: climbing to $3.2M in October and achieving yearly maximums of **$3.5M across both November and December**.
+- **Strategic Implication:** The strong **10.52% Month-over-Month (MoM) Growth KPI** reflects an overall positive vector for the year. The recurring mid-year contractions strongly correspond with wet-season monsoons in Cambodia impacting open road transit, while the Q4 surge mirrors pre-holiday freight acceleration and peak end-of-year tourism demand.
+
+### Finding 5 — Localized Technical Integrity Anomalies at Peripheral Stations
+- **The Quality Disconnect:** An unexpected inverse relationship was observed between a station's total traffic load and its technical infrastructure stability. While the busiest hub locations process massive volumes with smooth precision, specific low-volume, peripheral stations experience severe hardware, connectivity, or sensor calibration issues.
+- **The Data Proof:** According to the *Station Quality Summary* data table (**Figure 3**), the system recorded **52K total errors** across the year, averaging a baseline **Error Rate of 1.05%** and a **Plate Not Found Rate of 0.29%**.
+- **The Outliers:** Looking at specific locations, **Kompong Sela** acts as a clear system bottleneck, logging a network-high **Error Rate of 1.55%** and a **Plate Not Found Rate of 0.40%**. This pattern is closely mirrored by **Steung Haov**, which holds the absolute highest individual Error Rate (**1.64%**) and Plate Not Found Rate (**0.42%**) despite handling the lowest volume of trips in the country (165,855). Conversely, the highest-volume station, Phnom Penh, processed nearly 2 million transactions while maintaining a low, stable error rate of **0.77%**.
 
 ---
 
 ## Recommendations
 
-1. **Immediate** — Inspect and repair cameras at highest error rate stations. Target: reduce error rate below 0.5%
-2. **Operational** — Schedule maximum staffing and ensure all gates open from 13:00–17:00 daily
-3. **Ongoing** — Set automated alerts when any station error rate exceeds 2% monthly threshold
+1. **Immediate Infrastructure Optimization (Technical):** Deploy technical teams to inspect, clean, and recalibrate Automated License Plate Recognition (ALPR) camera sensors and local networking nodes at high-error peripheral stations—specifically targeting **Steung Haov** and **Kompong Sela**. The target objective is to suppress localized error rates below a standard **0.5%** operational tolerance threshold.
+2. **Dynamic Operational Staffing (Management):** Adjust toll lane resource allocation to align with verified temporal traffic flows. Implement maximum staffing protocols and ensure 100% of physical gates are fully operational between the peak hours of **13:00 and 17:00 daily** to handle the heavy afternoon traffic volume plateau safely, avoiding lane congestion.
+3. **Proactive Enforcement and Quality Controls (Safety):** Address the critical safety concern revealed by the **11.03% Speeding Violation Rate** (representing approximately 541,000 annual speeding incidents across 4.91M trips) by establishing tighter automated speed-ticketing integration. Simultaneously, embed automated DAX dashboard alerts to notify engineering teams the moment any station breaches a **2% monthly error rate** threshold to control revenue leakage.
 
 ---
 
@@ -357,7 +374,24 @@ RETURN CONCATENATEX(PeakHourTable, [Hour] & ":00")
 | Data includes 2022 | Dataset starts 27 December 2022 | Filtered to 2023 only in Power Query |
 | Peak hour shows unexpected time | Data reflects intercity travel pattern | Confirmed 15:00 is correct for this dataset |
 
+---
 
+## Project Structure
+
+```
+ppshv-expressway-dashboard/
+│
+├── README.md                      ← This file
+├── Project_Documentation.pdf      ← Full technical documentation
+│
+├── data/
+│   ├── PPSHV_2023_Datasets.csv    ← Fact table (4.91M rows)
+│   ├── PPSHV_STATIONS.csv         ← Station dimension
+│   └── PPSHV_GATES.csv            ← Gates dimension
+│
+└── dashboard/
+    └── PPSHV_Dashboard.pbix       ← Power BI file
+```
 
 ---
 
@@ -370,6 +404,16 @@ RETURN CONCATENATEX(PeakHourTable, [Hour] & ":00")
 
 ---
 
+## Team
+
+| Name | Role |
+|---|---|
+| [Member 1] | Data modeling, relationships and DAX |
+| [Member 2] | Dashboard design and formatting |
+| [Member 3] | Business analysis and insights |
+| [Member 4] | Presentation and documentation |
+
+---
 
 ## License
 
